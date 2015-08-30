@@ -11,8 +11,8 @@ def log_message(name, body):
     if " to " in name:
         name = name.split(" to ")[0]
 
-    #Don't log 'sent a photo'
-    if body == name + " sent a photo.":
+    #Don't log 'sent a...'
+    if body.startsWith(name + " sent a "):
         return
 
     c = conn.cursor()
