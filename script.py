@@ -12,7 +12,7 @@ def log_message(name, body):
         name = name.split(" to ")[0]
 
     #Don't log 'sent a...'
-    if body.startsWith(name + " sent a "):
+    if body.startswith(name + " sent a "):
         return
 
     c = conn.cursor()
