@@ -23,4 +23,8 @@ Getting it to work
 * Run python script (`python script.py`)
 * Wait for notifications to come through and be logged to `db.sqlite`. ([Sqliteman](http://sqliteman.yarpen.cz/) is a good GUI viewer)
 
+Limitations
+------------------------
 
+* Doesn't log which conversation is which. This could probably be done for group chats.
+* Only does first names, not last names. - Nothing can be done about this.
