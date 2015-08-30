@@ -7,6 +7,10 @@ conn = None
 
 def log_message(name, body):
 
+    #If group chat, get just peron's name
+    if " to " in name:
+        name = name.split(" to ")[0]
+
     #Don't log 'sent a photo'
     if body == name + " sent a photo.":
         return
