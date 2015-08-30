@@ -6,9 +6,13 @@ from dbus.mainloop.glib import DBusGMainLoop
 conn = None
 
 def log_message(name, body):
+
+    #Don't log 'sent a photo'
+    if body == name + " sent a photo.":
+        return
+
     c = conn.cursor()
     c.execute('insert into messages(name, message) VALUES (?, ?)', (name, body))
-
     print "Logged message from " + name + ': ' + body
 
 def get_notifications(bus, message):
